@@ -1,0 +1,59 @@
+﻿@model EvidencePojisteni.Models.Events
+
+
+
+<h1 class="hlavni">Upravit událost</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="KlientId" class="control-label"></label>
+                <input asp-for="KlientId" class="form-control" />
+                <span asp-validation-for="KlientId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InsuranceId" class="control-label"></label>
+                <input asp-for="InsuranceId" class="form-control" />
+                <span asp-validation-for="InsuranceId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nahlaseno" class="control-label"></label>
+                <input asp-for="Nahlaseno" class="form-control" />
+                <span asp-validation-for="Nahlaseno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Typ" class="control-label"></label>
+                <input asp-for="Typ" class="form-control" />
+                <span asp-validation-for="Typ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Odhad" class="control-label"></label>
+                <input asp-for="Odhad" class="form-control" />
+                <span asp-validation-for="Odhad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VyplacenaCastka" class="control-label"></label>
+                <input asp-for="VyplacenaCastka" class="form-control" />
+                <span asp-validation-for="VyplacenaCastka" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VyplacenoDatum" class="control-label"></label>
+                <input asp-for="VyplacenoDatum" class="form-control" />
+                <span asp-validation-for="VyplacenoDatum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Uložit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Zpět na výpis</a>
+</div>
+

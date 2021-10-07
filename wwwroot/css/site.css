@@ -1,0 +1,153 @@
+﻿body {
+    background-color: #214D63;
+    font: 14px Verdana;
+    min-width: 300px;
+    width: 100%;
+    margin: 0;
+}
+
+
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+header {
+    background-color: #193948;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    padding: 20px 0;
+}
+
+#logo {
+    background-image: url('images/database1.png');
+    height: 65px;
+    width: 65px;
+    margin-left: 33px;
+}
+
+h1 {
+    color: white;
+    font-weight: 100;
+    text-shadow: 2px 2px 1px #0a294b;
+    text-align: center;
+}
+
+#hlavni_nadpis {
+    display: inline;
+    color: #a5dddf;
+}
+
+#uzivatel {
+    margin-right: 15px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+}
+
+    ul li {
+        text-align: center;
+        font-size: 17px;
+        line-height: 4.3em;
+        text-shadow: 2px 2px 2px #041322;
+        float: left;
+    }
+
+.nav-item {
+    height: 70px;
+}
+
+.nav-link {
+    width: 130px;
+    text-align: left;
+    padding-left: 40px;
+}
+
+    .nav-link:hover,
+    .dropdown-item:hover {
+        background: #91C9E6;
+        box-shadow: 0px 0px 5px black;
+    }
+
+.dropdown-menu {
+    background-color: #214D63;
+    border: #91C9E6 solid 1px;
+}
+
+.dropdown-item {
+    background-color: #214D63;
+    color: #a5dddf;
+    border-bottom: #91C9E6 solid 1px;
+    border-top: #91C9E6 solid 1px;
+}
+
+.btn {
+    color: #a5dddf;
+}
+
+.cistic {
+    clear: both;
+}
+
+.main-screen {
+    min-height: 350px;
+}
+
+.uprostred {
+    text-align: center;
+    /*margin: 30px 0;*/
+}
+
+.table {
+    color: white;
+    border: red solid 2px;
+    width: auto;
+}
+
+th {
+    border-bottom: white solid 2px;
+}
+
+hr {
+    border: 1px solid #006797;
+}
+
+footer {
+    height: 40px;
+    color: white;
+}
+
+.centrovat {
+    align-items: center;
+}
+
+.container {
+    border: solid blue 2px;
+}
+
+@media screen and (min-width: 600px) {
+
+    nav {
+        float: left;
+        width: auto;
+    }
+
+        nav li {
+            float: none;
+        }
+
+    main {
+        align-content: center;
+    }
+}

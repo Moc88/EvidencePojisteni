@@ -1,0 +1,74 @@
+﻿@model IEnumerable<EvidencePojisteni.Models.Events>
+
+
+<h1 class="hlavni">Výpis pojistných událostí</h1>
+
+<p>
+    <a asp-action="Create">Vytvořit novou událost</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KlientId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InsuranceId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nahlaseno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Typ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Odhad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VyplacenaCastka)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VyplacenoDatum)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KlientId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InsuranceId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nahlaseno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Typ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Odhad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VyplacenaCastka)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VyplacenoDatum)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Upravit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detailly</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Smazat</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

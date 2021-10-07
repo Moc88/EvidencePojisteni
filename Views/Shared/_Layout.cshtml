@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, viewport-fit=cover" />
+    <title>EvidencePojisteni</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/site-grid.css" />
+</head>
+<body>
+    <header class="d-flex align-items-center justify-content-between">
+        <div id="logo" class="left text-hide">logo</div>
+        <h1 id="hlavni_nadpis">Evidence pojistných událostí</h1>
+        <div id="uzivatel" class="right">
+            <div class="mr-2"><a asp-controller="Account" asp-action="Login">Login</a></div>
+            <div><a asp-controller="Account" asp-action="Register">Registrace</a></div>
+        </div>
+    </header>
+    <section class="main-screen">
+        <div class="row">
+            <div class="col-xs-12 col-2">
+                <ul class="nav flex-column">
+                    <li class="nav-item ">
+                        <a class="nav-link btn justify-content-center" asp-controller="Klients" asp-action="Index">Klienti</a>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn" asp-controller="Insurances" asp-action="Index">Pojištění</a>
+                        
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link btn" asp-controller="Events" asp-action="Index">Pojistné události</a>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="col-9 container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+
+
+        
+</section>
+    <div class="cistic"></div>
+    <footer class="pl-3">
+        <hr>
+        Vytvořila Eva Mocová
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

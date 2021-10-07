@@ -1,0 +1,61 @@
+﻿@model EvidencePojisteni.Models.Events
+
+
+
+<h1 class="hlavni">Smazat pojistnou událost</h1>
+
+<h3 class="text-white">Opravdu chcete událost smazat?</h3>
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KlientId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KlientId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InsuranceId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InsuranceId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nahlaseno)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nahlaseno)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Typ)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Typ)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Odhad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Odhad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VyplacenaCastka)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VyplacenaCastka)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VyplacenoDatum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VyplacenoDatum)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Smazat" class="btn btn-danger" /> |
+        <a asp-action="Index">Zpět na výpis</a>
+    </form>
+</div>

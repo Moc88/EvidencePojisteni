@@ -1,0 +1,54 @@
+﻿@model EvidencePojisteni.Models.Insurance
+
+
+
+<h1 class="hlavni">Upravit</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="KlientId" class="control-label"></label>
+                <input asp-for="KlientId" class="form-control" />
+                <span asp-validation-for="KlientId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Typ" class="control-label"></label>
+                <input asp-for="Typ" class="form-control" />
+                <span asp-validation-for="Typ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Predmet" class="control-label"></label>
+                <input asp-for="Predmet" class="form-control" />
+                <span asp-validation-for="Predmet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlatnostOd" class="control-label"></label>
+                <input asp-for="PlatnostOd" class="form-control" />
+                <span asp-validation-for="PlatnostOd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlatnostDo" class="control-label"></label>
+                <input asp-for="PlatnostDo" class="form-control" />
+                <span asp-validation-for="PlatnostDo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RocniCastka" class="control-label"></label>
+                <input asp-for="RocniCastka" class="form-control" />
+                <span asp-validation-for="RocniCastka" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Uložit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Zpět na výpis</a>
+</div>
+

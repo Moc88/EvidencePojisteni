@@ -1,0 +1,69 @@
+﻿@model IEnumerable<EvidencePojisteni.Models.Insurance>
+
+
+
+<h1 class="hlavni">Výpis pojištění</h1>
+
+<p>
+    <a asp-action="Create">Vytvořit nové pojištění</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KlientId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Typ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Predmet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlatnostOd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlatnostDo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RocniCastka)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KlientId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Typ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Predmet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlatnostOd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlatnostDo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RocniCastka)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Upravit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detailly</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Smazat</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
