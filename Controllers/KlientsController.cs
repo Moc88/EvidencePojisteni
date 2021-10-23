@@ -55,7 +55,7 @@ namespace EvidencePojisteni.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Jmeno,Prijmeni")] Klient klient)
+        public async Task<IActionResult> Create([Bind("Id,Jmeno,Prijmeni,Email,Telefon")] Klient klient)
         {
             if (ModelState.IsValid)
             {
